@@ -1,46 +1,53 @@
-Majoon-e-Asar-e-Khass — Google Sites / Static Landing Pack
----------------------------------------------------------
+# Majoon-e-Asar-e-Khass — 7 Day Trial Pack (Landing + Checkout)
 
-Files included:
-- index.html       -> Main landing HTML (static)
-- style.css        -> Styles for the landing page
-- assets/          -> Product images and video (if available)
-- README.txt       -> This file
+## Overview
+Simple static landing page with integrated checkout modal (Netlify Forms) and Razorpay payment link.
+This site is hosted on Netlify and served from this GitHub repository.
 
-Quick usage options (choose one):
+## Files
+- `index.html`  — Main landing page (includes modal checkout form and JS to submit form + redirect to payment).
+- `style.css`   — Styles used by the page.
+- `checkout.html` / `thankyou.html` — (Not used if modal is in index.html)
+- `README.md`   — This file.
+- Assets (images & video):  
+  - `ayushvardhan-bottle.jpg.jpg`  
+  - `ayushvardhan-herbs.jpg.jpg`  
+  - `ayushvardhan-review.jpg.jpg`  
+  - `ayushvardhan-usage.jpg.jpg`  
+  - `Buy now – Limited stock available!.mp4`
 
-OPTION A — Host as static site (recommended)
-1. Upload the entire folder to any static host (Netlify, Vercel, Surge, GitHub Pages).
-2. Your index.html will serve as the landing page URL. Share that URL with leads.
-3. The Google Form is embedded (uses provided form). Razorpay link set to: https://rzp.io/rzp/6iSAna5
+> **Note:** Filenames above must match exactly (case-sensitive). If you rename images (recommended: remove double `.jpg`), update `index.html` accordingly.
 
-OPTION B — Use with Google Sites (two ways)
-B1 — Embed via URL (if you host index.html somewhere):
-   - Host index.html (see Option A)
-   - In Google Sites, Insert -> Embed -> By URL -> paste hosted page URL
+## Netlify / Deployment
+1. Connect this repository to Netlify (or use drag & drop).  
+2. For a static site (this repo), set **Publish directory** = `/` (root). No build command required.
+3. Netlify automatically enables HTTPS.
 
-B2 — Embed using "Embed Code" (limited):
-   - Google Sites sanitizes many HTML tags and may not accept a full page.
-   - Alternative: Upload images & video to Google Drive, update index.html image src with public Drive links and host the page, then Embed via URL.
+## Netlify Forms
+- The checkout form in `index.html` uses Netlify Forms (`data-netlify="true"`).  
+- Submitted orders appear in Netlify dashboard → Site → Forms → `order`.  
+- If you do not see submissions, check Netlify Forms settings or ensure the site is deployed via Netlify (not just local).
 
-How to replace images and video:
-- If you want to use your own images hosted elsewhere, update the <img src="..."> paths in index.html.
-- If using Google Drive, make files public and use the drive direct link (or host externally).
+## Payment
+- Payment is handled via a Razorpay payment link:  
+  `https://rzp.io/rzp/6iSAna5`  
+- The modal form submits order details (name, mobile, address, state, pincode) to Netlify, then redirects user to this link.
 
-Google Form behavior:
-- The form is the provided form ID (short link). Google Forms will show a "Submit another response" and may not auto-redirect.
-- Best practice: In form's confirmation message, include the Razorpay link and instructions to complete payment immediately.
+## How to change Razorpay link
+- Open `index.html` and find the constant: `const RAZORPAY_LINK = "https://rzp.io/rzp/6iSAna5";`  
+- Replace with your new link and commit → Netlify will redeploy.
 
-Important notes:
-- The page uses only simple HTML/CSS — no server-side code. For automated order confirmation/payment matching you'll need to implement a server or use Razorpay webhooks.
-- Keep the Razorpay link private and monitor payments manually to reconcile orders with form responses.
+## Quick troubleshooting
+- Images not showing → check exact filenames in repo root and update `index.html`. Linux servers are case-sensitive.
+- Form not submitting → ensure site is deployed on Netlify (Netlify Forms works only when served from Netlify).
+- If modal doesn't open → open browser console (F12) and share errors.
 
-If you want, I can:
-- Create a public hosted version (I can prepare the static files — you will still need to host via Netlify/GitHub Pages or I can give step-by-step hosting help)
-- Generate a ZIP file for direct download (I have created it already).
+## Recommended future improvements
+- Rename image files to remove duplicated extensions (e.g., `ayushvardhan-bottle.jpg`) and update `index.html`.
+- Add `favicon.png` in root and add `<link rel="icon" href="favicon.png">` in `<head>`.
+- Optional: move assets to an `assets/` folder and change `src` paths in HTML.
 
-Razorpay payment link used in this pack:
-https://rzp.io/rzp/6iSAna5
+## Contact / Owner
+- Owner: Shahalam Ansari  
+- WhatsApp: +91-XXXXXXXXXX (replace in code / site where needed)
 
-Google Form (short URL provided):
-https://forms.gle/FLGfjSiCaFBY4PL96
