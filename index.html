@@ -4,101 +4,74 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Majoon-e-Asar-e-Khass — 7 Day Trial Pack</title>
-  <meta name="description" content="Majoon-e-Asar-e-Khass 7 Day Trial Pack — 100% Ayurvedic. Try now for ₹990 with free doorstep delivery." />
   <link rel="stylesheet" href="style.css" />
-  <!-- favicon (optional): <link rel="icon" href="favicon.png"> -->
-
   <style>
-    :root{
-      --primary:#A0522D;
-      --accent:#FFD700;
-      --bg:#FFF8F0;
-      --text:#1C1C1C;
-      --card:#ffffff;
-      --maxw:980px;
+    .btn-green {
+      background-color: #28a745;
+      color: #fff !important;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{font-family: "Open Sans", Arial, sans-serif;background:var(--bg);color:var(--text);margin:0;padding:0;}
-    .container{max-width:var(--maxw);margin:0 auto;padding:20px;}
-    header{margin-bottom:6px}
-    .brand{font-family:'Merriweather',serif;font-size:20px;color:var(--primary);font-weight:700}
-    .hero{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
-    .hero-left{flex:1;min-width:260px}
-    .h1{font-family:'Merriweather',serif;font-size:28px;margin:0 0 8px;color:var(--primary);line-height:1.05}
-    .lead{font-size:15px;margin:0 0 12px;color:#333}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px}
-    .btn{background:var(--accent);color:#000;padding:12px 16px;border-radius:8px;border:none;font-weight:700;text-decoration:none;cursor:pointer;box-shadow:0 6px 14px rgba(0,0,0,0.12);font-size:15px}
-    .secondary{background:transparent;border:2px solid var(--primary);color:var(--primary);padding:10px 14px;border-radius:8px;text-decoration:none;display:inline-flex;align-items:center}
-    .product-img{max-width:100%;height:auto;border-radius:8px;display:block;margin-top:10px}
-    .section{margin-top:18px}
-    .grid3{display:flex;gap:14px;flex-wrap:wrap}
-    .card{flex:1;min-width:160px;background:var(--card);padding:12px;border-radius:10px;box-shadow:0 6px 14px rgba(0,0,0,0.05)}
-    .card .label{font-weight:700;margin-top:6px}
-    .badge{background:var(--primary);color:var(--accent);padding:8px 12px;border-radius:8px;font-weight:700;margin-bottom:10px}
-    aside{flex:0 0 320px;min-width:230px}
-    .small-note{font-size:13px;color:#666;margin-top:6px}
-
-    /* Modal */
-    .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center;padding:20px;z-index:9999}
-    .modal{background:#fff;border-radius:10px;max-width:520px;width:100%;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,0.2);position:relative}
-    .modal h3{margin:0 0 8px;color:var(--primary)}
-    .close-btn{position:absolute;right:10px;top:10px;background:transparent;border:0;font-size:18px;cursor:pointer}
-    .form-row{margin-bottom:10px}
-    input[type="text"], input[type="tel"], textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;font-size:14px}
-    label{font-size:14px;color:#222;display:block;margin-bottom:6px}
-    .btn-full{width:100%;display:inline-block;text-align:center}
-    .disabled{opacity:0.6;pointer-events:none}
-    .footer{margin-top:26px;padding:18px;background:var(--primary);color:#fff;border-radius:8px;text-align:center}
-    .policy-section{background:#fff;padding:28px 20px;border-top:1px solid #eee;margin-top:30px}
-    details{margin-top:12px;padding:12px;border-radius:8px;border:1px solid #eee;background:#fafafa}
-    details summary{font-weight:700;cursor:pointer;color:#333}
-    @media(max-width:880px){
-      .hero{flex-direction:column}
-      aside{flex:1 0 auto}
-      .h1{font-size:22px}
+    .btn-green:hover {
+      background-color: #218838;
+    }
+    .form-wrap input, .form-wrap textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-wrap button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .form-wrap button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <header>
+    <header class="header">
       <div class="brand">MAJOONE <span style="color:var(--accent)">ASAR-E-KHASS</span></div>
     </header>
 
-    <section class="hero" aria-labelledby="hero-heading">
+    <section class="hero">
       <div class="hero-left">
-        <h1 id="hero-heading" class="h1">Majoon-e-Asar-e-Khass<br>
-          <small style="font-size:16px;color:#333;font-weight:600">7 Day Trial Pack – Feel the Change in a Week</small>
-        </h1>
-
+        <h1 class="h1">Majoon-e-Asar-e-Khass<br><small style="font-size:16px;color:#333;font-weight:600">7 Day Trial Pack – Feel the Change in a Week</small></h1>
         <p class="lead">Boost Stamina • Increase Energy • 100% Ayurvedic Formula • Prepaid ₹990 (Free Delivery)</p>
-
         <div class="cta-row">
-          <button id="openCheckout" class="btn" aria-haspopup="dialog">Order Now – ₹990 Free Delivery</button>
-          <a class="secondary" href="https://rzp.io/rzp/6iSAna5" target="_blank" rel="noopener">Pay Now</a>
+          <a class="btn" href="#order-form">Buy Now – ₹990 Free Delivery</a>
         </div>
 
         <div class="section">
           <div class="grid3">
-            <div class="card"><div style="font-size:22px">🌿</div><div class="label">Boost Energy</div><div style="font-size:13px;color:#444">Feel more active & focused</div></div>
-            <div class="card"><div style="font-size:22px">⚡</div><div class="label">Improve Stamina</div><div style="font-size:13px;color:#444">More endurance daily</div></div>
-            <div class="card"><div style="font-size:22px">✅</div><div class="label">Natural Formula</div><div style="font-size:13px;color:#444">Herbal, gentle & safe</div></div>
+            <div class="card"><div class="icon">🌿</div><div><strong>Boost Energy</strong><div style="font-size:13px;color:#444">Feel more active & focused</div></div></div>
+            <div class="card"><div class="icon">⚡</div><div><strong>Improve Stamina</strong><div style="font-size:13px;color:#444">More endurance daily</div></div></div>
+            <div class="card"><div class="icon">✅</div><div><strong>Natural Formula</strong><div style="font-size:13px;color:#444">Herbal, no known side effects</div></div></div>
           </div>
         </div>
 
         <div class="section about">
-          <!-- Exact filenames (as you uploaded) -->
-          <img src="ayushvardhan-bottle.jpg.jpg" alt="Majoon Asar e Khass 7 day trial pack – Ayurvedic supplement for energy strength and stamina" style="max-width:420px" class="product-img">
-          <div style="margin-top:10px;">
-            <h3 style="margin-top:8px;color:var(--primary);font-family:'Merriweather',serif">Trusted Ayurvedic Blend</h3>
-            <p style="color:#333">Majoon-e-Asar-e-Khass is a premium Ayurvedic formulation made using traditional herbs to support vitality, stamina, and energy.</p>
-            <div style="background:linear-gradient(90deg,var(--primary),#8a3f2a);color:var(--accent);padding:8px;border-radius:8px;font-weight:700;margin-top:8px;display:inline-block">Limited Time: 7 Day Trial Pack — ₹990 | Free Delivery</div>
+          <img src="ayushvardhan-bottle.jpg" alt="Majoon Asar-e-Khass 7 Day Trial Pack Ayurvedic supplement for energy strength and stamina with natural herbs" style="max-width:420px;" />
+          <div>
+            <h3 style="margin-top:0;color:var(--primary);font-family:'Merriweather',serif">Trusted Ayurvedic Blend</h3>
+            <p style="color:#333">Majoon-e-Asar-e-Khass is a premium Ayurvedic formulation made using traditional herbs to support male vitality, stamina, and overall energy. Suitable for those looking for a natural boost.</p>
+            <div class="offer">Limited Time: 7 Day Trial Pack — ₹990 | Free Delivery</div>
           </div>
         </div>
 
         <div class="section">
-          <h3 style="color:var(--primary)">What to Expect</h3>
+          <h3 style="margin:0 0 8px 0;color:var(--primary)">What to Expect</h3>
           <ul style="color:#444">
             <li>Daily use for 7 days</li>
             <li>Noticeable improvement in energy & stamina</li>
@@ -106,206 +79,48 @@
           </ul>
         </div>
 
-        <div class="section">
-          <h3 style="color:var(--primary)">Customer Reviews (Sample)</h3>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <div style="background:#fff;padding:12px;border-radius:8px;box-shadow:0 6px 12px rgba(0,0,0,0.04);min-width:160px">
-              <strong>Ali, Delhi</strong>
-              <div style="font-size:13px;color:#444;margin-top:6px">"Felt more energetic after 4 days."</div>
-            </div>
-            <div style="background:#fff;padding:12px;border-radius:8px;box-shadow:0 6px 12px rgba(0,0,0,0.04);min-width:160px">
-              <strong>Rohit, Mumbai</strong>
-              <div style="font-size:13px;color:#444;margin-top:6px">"Good natural product."</div>
-            </div>
-          </div>
+        <div class="section testimonials">
+          <div class="testi">⭐⭐⭐⭐⭐<br><strong>Ali, Delhi</strong><div class="small">"Felt more energetic after 4 days."</div></div>
+          <div class="testi">⭐⭐⭐⭐⭐<br><strong>Rohit, Mumbai</strong><div class="small">"Good natural product."</div></div>
+          <div class="testi">⭐⭐⭐⭐⭐<br><strong>Sameer, Lucknow</strong><div class="small">"Effective and gentle."</div></div>
         </div>
-
       </div>
 
-      <aside>
-        <div style="background:#fff;padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06)">
-          <div style="font-weight:700;margin-bottom:8px">7 Day Trial • ₹990</div>
-          <img src="ayushvardhan-herbs.jpg.jpg" alt="Ayurvedic herbs in Majoon Asar e Khass natural energy booster supplement" class="product-img">
-          <div style="margin-top:12px">
-            <a class="btn btn-full" href="https://rzp.io/rzp/6iSAna5" target="_blank" rel="noopener">Pay ₹990 Now</a>
-            <div class="small-note">Prepaid order. Free doorstep delivery.</div>
-          </div>
-          <div style="margin-top:10px">
-            <video controls style="width:100%;margin-top:10px;border-radius:8px">
-              <source src="Buy%20now%20%E2%80%93%20Limited%20stock%20available!.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
+      <aside class="hero-right">
+        <div class="badge">7 Day Trial • ₹990</div>
+        <img src="ayushvardhan-herbs.jpg" alt="Ayurvedic herbs in Majoon Asar-e-Khass natural energy booster supplement" class="product-img" />
+        <div style="margin-top:10px;width:100%;">
+          <div style="font-weight:700;margin-bottom:6px">Secure Payment</div>
+          <a class="btn-green" href="#order-form">Buy Now</a>
+          <div style="font-size:13px;color:#666;margin-top:8px">Prepaid order. Free doorstep delivery.</div>
         </div>
+        <video src='Buy-now-limited-stock.mp4' controls style='width:100%;margin-top:12px;border-radius:8px'></video>
       </aside>
     </section>
 
-    <!-- Policies accordion (single page for all policies) -->
-    <section id="policies" class="policy-section" aria-label="Policies">
-      <div style="max-width:980px;margin:0 auto;color:#222;font-family:Arial,Helvetica,sans-serif;">
-        <h2 style="color:var(--primary);margin-top:0">Terms & Conditions and Policies</h2>
-        <p style="color:#444;margin-top:6px">Read these policies before placing an order. For any questions contact WhatsApp: <strong>+91-XXXXXXXXXX</strong>.</p>
-
-        <details>
-          <summary>Return & Refund Policy</summary>
-          <div style="margin-top:8px;color:#444;line-height:1.5">
-            <ul>
-              <li><strong>Return window:</strong> Returns accepted within 7 days from date of delivery.</li>
-              <li><strong>Condition:</strong> Product must be unused, in original packaging and seal intact. Trial packs must be returned unused for a refund.</li>
-              <li><strong>How to request:</strong> Contact us on WhatsApp with order details and photos.</li>
-              <li><strong>Refund processing:</strong> Approved refunds processed within 7–10 business days to the original payment method.</li>
-              <li><strong>Return shipping:</strong> If return is due to our error (damaged/wrong item), we cover return shipping. For change-of-mind returns, customer bears shipping cost.</li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>Shipping & Delivery Policy</summary>
-          <div style="margin-top:8px;color:#444;line-height:1.5">
-            <ul>
-              <li><strong>Delivery time:</strong> Usually 3–7 working days depending on location.</li>
-              <li><strong>Shipping charges:</strong> Trial Pack price (₹990) includes free doorstep delivery. Other products may have charges.</li>
-              <li><strong>Tracking:</strong> Tracking details shared via WhatsApp or email once dispatched (if available).</li>
-              <li><strong>Incorrect address:</strong> If returned due to incorrect address, re-shipment charges will apply.</li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>Terms & Conditions</summary>
-          <div style="margin-top:8px;color:#444;line-height:1.5">
-            <ul>
-              <li>All orders are subject to availability. We may cancel orders if stock is not available or fraud is suspected.</li>
-              <li>Products are Ayurvedic. Consult a doctor if you have medical conditions or are on medication.</li>
-              <li>Prices and offers can change. The price at checkout is final.</li>
-              <li>Payment is prepaid via the Razorpay payment link. Order is confirmed only after successful payment.</li>
-              <li>Disputes will be under jurisdiction of local courts in India.</li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>Privacy Policy</summary>
-          <div style="margin-top:8px;color:#444;line-height:1.5">
-            <ul>
-              <li>We collect basic personal information (name, mobile, address) only to process orders and delivery.</li>
-              <li>Data is shared with service providers as needed (courier, payment gateway). We do not sell personal data.</li>
-              <li>Form submissions are stored by Netlify. To request data deletion, contact us on WhatsApp.</li>
-              <li>We take reasonable measures to protect data but cannot guarantee absolute online security.</li>
-            </ul>
-          </div>
-        </details>
-
-        <p style="margin-top:16px;color:#666;font-size:13px">Questions? WhatsApp: <strong>+91-XXXXXXXXXX</strong></p>
-      </div>
+    <section id="order-form" class="section form-wrap">
+      <h2 style="margin-top:0;color:var(--primary)">Confirm Your Order Now</h2>
+      <form onsubmit="handleSubmit(event)">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="tel" name="mobile" placeholder="Mobile Number" required />
+        <textarea name="address" placeholder="Full Address" required></textarea>
+        <input type="text" name="state" placeholder="State" required />
+        <input type="text" name="zip" placeholder="Zip Code" required />
+        <button type="submit">Buy Now & Pay</button>
+      </form>
     </section>
 
     <footer class="footer">
       <div><strong>Need help? WhatsApp us:</strong> <a href="https://wa.me/91" style="color:#fff;text-decoration:underline">Click to chat</a></div>
-      <p style="margin:10px 0 0;">
-        <a href="#policies" style="color:#fff;text-decoration:underline;margin-right:8px">Terms & Policies</a>
-      </p>
-      <div style="font-size:13px;margin-top:10px">Copyright © Hasan Ibrahim Trader</div>
+      <div class="small">This is an Ayurvedic product. Please consult your physician if you are on medication or have a medical condition.</div>
     </footer>
   </div>
 
-  <!-- Modal (checkout) -->
-  <div id="checkoutModal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal" role="document" aria-labelledby="modalTitle">
-      <button class="close-btn" id="closeModal" aria-label="Close">✕</button>
-      <h3 id="modalTitle">Confirm Your Order</h3>
-      <p style="margin:6px 0 12px;color:#333">Fill your details below and click <strong>Pay Now ₹990</strong>.</p>
-
-      <form id="orderForm" name="order" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="order">
-        <div class="form-row">
-          <label for="name">Full Name</label>
-          <input id="name" name="name" type="text" required>
-        </div>
-        <div class="form-row">
-          <label for="mobile">Mobile Number</label>
-          <input id="mobile" name="mobile" type="tel" pattern="[0-9]{10}" placeholder="10 digit mobile" required>
-        </div>
-        <div class="form-row">
-          <label for="address">Full Address</label>
-          <textarea id="address" name="address" rows="3" required></textarea>
-        </div>
-        <div class="form-row">
-          <label for="state">State</label>
-          <input id="state" name="state" type="text" required>
-        </div>
-        <div class="form-row">
-          <label for="zipcode">Pincode</label>
-          <input id="zipcode" name="zipcode" type="text" pattern="[0-9]{5,7}" required>
-        </div>
-
-        <div style="margin-top:12px">
-          <button id="payNowBtn" type="submit" class="btn btn-full">Pay Now ₹990</button>
-        </div>
-        <div id="formMsg" class="small-note" style="display:none;margin-top:10px"></div>
-      </form>
-    </div>
-  </div>
-
   <script>
-    // Configuration
-    const RAZORPAY_LINK = "https://rzp.io/rzp/6iSAna5";
-
-    // Elements
-    const openBtn = document.getElementById('openCheckout');
-    const modal = document.getElementById('checkoutModal');
-    const closeBtn = document.getElementById('closeModal');
-    const form = document.getElementById('orderForm');
-    const payNowBtn = document.getElementById('payNowBtn');
-    const formMsg = document.getElementById('formMsg');
-
-    function openModal(){
-      modal.style.display = 'flex';
-      modal.setAttribute('aria-hidden','false');
-      document.body.style.overflow = 'hidden';
-      document.getElementById('name').focus();
+    function handleSubmit(event) {
+      event.preventDefault();
+      window.location.href = "https://rzp.io/rzp/6iSAna5";
     }
-    function closeModal(){
-      modal.style.display = 'none';
-      modal.setAttribute('aria-hidden','true');
-      document.body.style.overflow = '';
-    }
-
-    openBtn.addEventListener('click', openModal);
-    closeBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
-    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
-
-    // Submit via Netlify Forms (AJAX) then redirect to payment link
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      payNowBtn.disabled = true;
-      payNowBtn.classList.add('disabled');
-      formMsg.style.display = 'none';
-
-      const data = new FormData(form);
-      data.append('product','Majoon-e-Asar-e-Khass 7 Day Trial Pack');
-      data.append('price','990');
-
-      const payload = new URLSearchParams(data).toString();
-
-      fetch('/', {
-        method:'POST',
-        headers:{'Content-Type':'application/x-www-form-urlencoded'},
-        body: payload
-      })
-      .then(function(res){
-        // Redirect to payment. Netlify records the submission.
-        window.location.href = RAZORPAY_LINK;
-      })
-      .catch(function(err){
-        console.error(err);
-        formMsg.textContent = 'Submission failed. Please try again or click the Pay Now link.';
-        formMsg.style.display = 'block';
-        payNowBtn.disabled = false;
-        payNowBtn.classList.remove('disabled');
-      });
-    });
   </script>
 </body>
 </html>
