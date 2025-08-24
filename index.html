@@ -1,127 +1,723 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Majoon-e-Asar-e-Khass — 7 Day Trial Pack</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .btn-green {
-      background-color: #28a745;
-      color: #fff !important;
-      padding: 10px 20px;
-      border-radius: 5px;
-      display: inline-block;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .btn-green:hover {
-      background-color: #218838;
-    }
-    .form-wrap input, .form-wrap textarea {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .form-wrap button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    .form-wrap button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majoon e Asar e Khass - Herbal Energy Supplement</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #3e6b3e;
+            --secondary: #d8a24c;
+            --accent: #c53d3d;
+            --light: #f8f5e9;
+            --dark: #2a2a2a;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f8f5e9"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%23d8a24c" stroke-width="0.5" stroke-opacity="0.1"/></svg>');
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(62, 107, 62, 0.95);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            color: var(--light);
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-left: 25px;
+            position: relative;
+        }
+
+        .nav-link {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 5px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary);
+        }
+
+        .nav-link.active {
+            color: var(--secondary);
+            border-bottom: 2px solid var(--secondary);
+        }
+
+        .order-btn {
+            background-color: var(--secondary);
+            color: var(--dark);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .order-btn i {
+            margin-right: 8px;
+        }
+
+        .order-btn:hover {
+            background-color: var(--light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('majoon-background.jpg') no-repeat center center/cover;
+            color: var(--light);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--light);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--light);
+            border: 2px solid var(--light);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        /* Benefits Section */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 60px 0 40px;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        .benefits {
+            padding: 40px 0;
+        }
+
+        .benefits-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        /* Product Info */
+        .product-info {
+            background-color: white;
+            padding: 60px 0;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .product-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image img {
+            width: 100%;
+            display: block;
+        }
+
+        .product-details h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .features {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .features li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .features i {
+            color: var(--secondary);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Order Form */
+        .order-section {
+            padding: 80px 0;
+            background: linear-gradient(to bottom, #f8f5e9, #e8dfc8);
+        }
+
+        .order-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-container h3 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(62, 107, 62, 0.2);
+        }
+
+        .submit-btn {
+            background-color: var(--secondary);
+            color: var(--dark);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .submit-btn i {
+            margin-right: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary);
+            color: var(--light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            position: relative;
+        }
+
+        .footer-col h4:after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: var(--secondary);
+            margin-top: 10px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--light);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--secondary);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .product-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h2 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: var(--primary);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-item {
+                margin: 15px 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <div class="brand">MAJOONE <span style="color:var(--accent)">ASAR-E-KHASS</span></div>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiByeD0iMTAiIGZpbGw9IiM2MkE2NjIiLz4KPHBhdGggZD0iTTE1IDE1TDM1IDM1TTM1IDE1TDE1IDM1IiBzdHJva2U9IiNERDlCNDciIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxjaXJjbGUgY3g9IjI1IiBjeT0iMjUiIHI9IjEwIiBzdHJva2U9IiNERDlCNDciIHN0cm9rZS13aWR0aD0iNCIvPgo8L3N2Zz4K" alt="Majoon e Asar e Khass Logo">
+                <h1>MAJOONE ASAR-E-KHASS</h1>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item"><a href="#benefits" class="nav-link"><i class="fas fa-heart"></i> Benefits</a></li>
+                <li class="nav-item"><a href="#product" class="nav-link"><i class="fas fa-capsules"></i> Product</a></li>
+                <li class="nav-item"><a href="#ingredients" class="nav-link"><i class="fas fa-leaf"></i> Ingredients</a></li>
+                <li class="nav-item"><a href="#testimonials" class="nav-link"><i class="fas fa-comments"></i> Testimonials</a></li>
+                <li class="nav-item"><a href="#order" class="nav-link order-btn"><i class="fas fa-shopping-cart"></i> Order Now</a></li>
+            </ul>
+        </div>
     </header>
 
-    <section class="hero">
-      <div class="hero-left">
-        <h1 class="h1">Majoon-e-Asar-e-Khass<br><small style="font-size:16px;color:#333;font-weight:600">7 Day Trial Pack – Feel the Change in a Week</small></h1>
-        <p class="lead">Boost Stamina • Increase Energy • 100% Ayurvedic Formula • Prepaid ₹990 (Free Delivery)</p>
-        <div class="cta-row">
-          <a class="btn" href="#order-form">Buy Now – ₹990 Free Delivery</a>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h2>MAJOONE ASAR-E-KHASS</h2>
+            <p>For Energy, Strength & Stamina</p>
+            <div class="hero-btns">
+                <a href="#order" class="btn btn-primary"><i class="fas fa-bolt"></i> Boost Your Energy</a>
+                <a href="#benefits" class="btn btn-secondary"><i class="fas fa-info-circle"></i> Learn More</a>
+            </div>
         </div>
-
-        <div class="section">
-          <div class="grid3">
-            <div class="card"><div class="icon">🌿</div><div><strong>Boost Energy</strong><div style="font-size:13px;color:#444">Feel more active & focused</div></div></div>
-            <div class="card"><div class="icon">⚡</div><div><strong>Improve Stamina</strong><div style="font-size:13px;color:#444">More endurance daily</div></div></div>
-            <div class="card"><div class="icon">✅</div><div><strong>Natural Formula</strong><div style="font-size:13px;color:#444">Herbal, no known side effects</div></div></div>
-          </div>
-        </div>
-
-        <div class="section about">
-          <img src="ayushvardhan-bottle.jpg" alt="Majoon Asar-e-Khass 7 Day Trial Pack Ayurvedic supplement for energy strength and stamina with natural herbs" style="max-width:420px;" />
-          <div>
-            <h3 style="margin-top:0;color:var(--primary);font-family:'Merriweather',serif">Trusted Ayurvedic Blend</h3>
-            <p style="color:#333">Majoon-e-Asar-e-Khass is a premium Ayurvedic formulation made using traditional herbs to support male vitality, stamina, and overall energy. Suitable for those looking for a natural boost.</p>
-            <div class="offer">Limited Time: 7 Day Trial Pack — ₹990 | Free Delivery</div>
-          </div>
-        </div>
-
-        <div class="section">
-          <h3 style="margin:0 0 8px 0;color:var(--primary)">What to Expect</h3>
-          <ul style="color:#444">
-            <li>Daily use for 7 days</li>
-            <li>Noticeable improvement in energy & stamina</li>
-            <li>Instructions & dosage included inside pack</li>
-          </ul>
-        </div>
-
-        <div class="section testimonials">
-          <div class="testi">⭐⭐⭐⭐⭐<br><strong>Ali, Delhi</strong><div class="small">"Felt more energetic after 4 days."</div></div>
-          <div class="testi">⭐⭐⭐⭐⭐<br><strong>Rohit, Mumbai</strong><div class="small">"Good natural product."</div></div>
-          <div class="testi">⭐⭐⭐⭐⭐<br><strong>Sameer, Lucknow</strong><div class="small">"Effective and gentle."</div></div>
-        </div>
-      </div>
-
-      <aside class="hero-right">
-        <div class="badge">7 Day Trial • ₹990</div>
-        <img src="ayushvardhan-herbs.jpg" alt="Ayurvedic herbs in Majoon Asar-e-Khass natural energy booster supplement" class="product-img" />
-        <div style="margin-top:10px;width:100%;">
-          <div style="font-weight:700;margin-bottom:6px">Secure Payment</div>
-          <a class="btn-green" href="#order-form">Buy Now</a>
-          <div style="font-size:13px;color:#666;margin-top:8px">Prepaid order. Free doorstep delivery.</div>
-        </div>
-        <video src='Buy-now-limited-stock.mp4' controls style='width:100%;margin-top:12px;border-radius:8px'></video>
-      </aside>
     </section>
 
-    <section id="order-form" class="section form-wrap">
-      <h2 style="margin-top:0;color:var(--primary)">Confirm Your Order Now</h2>
-      <form onsubmit="handleSubmit(event)">
-        <input type="text" name="name" placeholder="Full Name" required />
-        <input type="tel" name="mobile" placeholder="Mobile Number" required />
-        <textarea name="address" placeholder="Full Address" required></textarea>
-        <input type="text" name="state" placeholder="State" required />
-        <input type="text" name="zip" placeholder="Zip Code" required />
-        <button type="submit">Buy Now & Pay</button>
-      </form>
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Key Benefits</h2>
+            <div class="benefits-container">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Boost Energy</h3>
+                    <p>Natural energy enhancement without crashes or jitters. Feel revitalized throughout your day.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Improve Stamina</h3>
+                    <p>Enhance your endurance and performance during physical activities and daily tasks.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Natural Formula</h3>
+                    <p>100% Ayurvedic formulation with natural ingredients for safe and effective results.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>No Side Effects</h3>
+                    <p>Gentle on your body with no harmful chemicals or synthetic additives.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer class="footer">
-      <div><strong>Need help? WhatsApp us:</strong> <a href="https://wa.me/91" style="color:#fff;text-decoration:underline">Click to chat</a></div>
-      <div class="small">This is an Ayurvedic product. Please consult your physician if you are on medication or have a medical condition.</div>
+    <!-- Product Information -->
+    <section class="product-info" id="product">
+        <div class="container product-container">
+            <div class="product-image">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDYwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiByeD0iMzAiIGZpbGw9IiNGOUYzRTMiLz4KPGNpcmNsZSBjeD0iMzAwIiBjeT0iMzAwIiByPSIxNTAiIGZpbGw9IiNERDlCNDciLz4KPGNpcmNsZSBjeD0iMzAwIiBjeT0iMzAwIiByPSIxMDAiIGZpbGw9IiM2MkE2NjIiLz4KPHJlY3QgeD0iMjQwIiB5PSIyNDAiIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iMTAiIGZpbGw9IiNGOUYzRTMiLz4KPHBhdGggZD0iTTI2NSAzMjBMMzEwIDM1ME0zMzUgMjcwTDM5MCAzMTAiIHN0cm9rZT0iI0ZBRkFGQSIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+" alt="Majoon e Asar e Khass Product">
+            </div>
+            <div class="product-details">
+                <h3>Natural Ayurvedic Formula</h3>
+                <p>Majoon e Asar e Khass is a time-tested Ayurvedic formulation that has been used for centuries to enhance vitality, strength, and stamina. Our product is crafted with the finest natural ingredients, carefully selected for their synergistic effects.</p>
+                
+                <ul class="features">
+                    <li><i class="fas fa-check-circle"></i> 100% Natural Ingredients</li>
+                    <li><i class="fas fa-check-circle"></i> Traditional Ayurvedic Recipe</li>
+                    <li><i class="fas fa-check-circle"></i> Scientifically Validated</li>
+                    <li><i class="fas fa-check-circle"></i> Manufactured in GMP Certified Facility</li>
+                    <li><i class="fas fa-check-circle"></i> Suitable for All Ages</li>
+                </ul>
+                
+                <a href="#order" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section class="order-section" id="order">
+        <div class="container">
+            <h2 class="section-title">Order Your Supply</h2>
+            <div class="order-container">
+                <h3>Majoon e Asar e Khass - 7 Day Trial Pack</h3>
+                <form id="order-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Shipping Address</label>
+                        <textarea id="address" class="form-control" rows="3" placeholder="Enter your complete address" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <select id="quantity" class="form-control" required>
+                            <option value="">Select quantity</option>
+                            <option value="1">1 Pack (7 Days Supply) - $29.99</option>
+                            <option value="2">2 Packs (14 Days Supply) - $54.99</option>
+                            <option value="3">3 Packs (21 Days Supply) - $79.99</option>
+                            <option value="4">4 Packs (28 Days Supply) - $99.99</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn"><i class="fas fa-check-circle"></i> Complete Order</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h4>About Us</h4>
+                <p>We are dedicated to providing traditional Ayurvedic solutions for modern health challenges. Our products are crafted with care and based on centuries-old wisdom.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#product">Product Info</a></li>
+                    <li><a href="#ingredients">Ingredients</a></li>
+                    <li><a href="#order">Order Now</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> info@majooneasar.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Ayurveda Lane, Wellness City</li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <p>Stay connected with us for updates and health tips</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Majoon e Asar e Khass. All Rights Reserved.</p>
+        </div>
     </footer>
-  </div>
 
-  <script>
-    function handleSubmit(event) {
-      event.preventDefault();
-      window.location.href = "https://rzp.io/rzp/6iSAna5";
-    }
-  </script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu after clicking
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+        
+        // Form submission
+        const orderForm = document.getElementById('order-form');
+        orderForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your order! We will contact you shortly for confirmation.');
+            orderForm.reset();
+        });
+    </script>
 </body>
 </html>
